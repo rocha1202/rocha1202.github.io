@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="aframe.js"></script>
+        <script src="main.js" defer></script>
       </head>
 
   
   <a-scene background="color: #000000">
     <a-assets>
-      <a-asset-item id="cityModel" src="/3D/3D_SalaCinema.glb"></a-asset-item>
+      <a-asset-item id="Cinema" src="/3D/3D_SalaCinema.glb"></a-asset-item>
+      <video id="video-player" loop="true" src=""></video>
     </a-assets>
-    <a-entity gltf-model="#cityModel"></a-entity>
+    
+    <!-- Cinema --><a-entity gltf-model="#Cinema" position="-3 -1 0"></a-entity>
+    <!-- Video Player --><a-video src="#video-player" width="9.2" height="4" position="-2.8 2.1 -8"></a-video>
+    <a-plane position="3 1 -5" rotation ="180 90 0" width="50" height="10" color="black"></a-plane>
+    <a-plane position="2 1 8" rotation ="0 180 0" width="10" height="10" color="black"></a-plane>
   </a-scene>
 
 </html>
