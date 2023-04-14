@@ -11,11 +11,23 @@
       <a-asset-item id="Cinema" src="/3D/3D_SalaCinema.glb"></a-asset-item>
       <video id="video-player" loop="true" src=""></video>
     </a-assets>
+    <a-camera fov="100" position="-3 0.5 -5">
+        <a-entity cursor position="0 0 -1"
+        geometry="primitive: sphere; radius: 0.008"
+        material="color: lightblue; shader: flat; opacity: 0.5">
+        </a-entity>
+    </a-camera>
     
     <!-- Cinema --><a-entity gltf-model="#Cinema" position="-3 -1 0"></a-entity>
     <!-- Video Player --><a-video src="#video-player" width="9.2" height="4" position="-2.8 2.1 -8"></a-video>
-    <a-plane position="3 1 -5" rotation ="180 90 0" width="50" height="10" color="black"></a-plane>
+    <!-- Right Wall --><a-plane position="3 1 -5" rotation ="180 90 0" width="50" height="10" color="black"></a-plane>
     <a-plane position="2 1 8" rotation ="0 180 0" width="10" height="10" color="black"></a-plane>
+
+    <!--Video 1--><a-box color="red" depth="1.5" height="2" width="1" position="3.2 2 -5"
+                  event-set__enter="_event: mouseenter; material.color: #FF0000" 
+                  event-set__leave="_event: mouse leave; material.color: #AA0000">
+                  </a-box><a-image src="/Poster/titanic.jpg" rotation ="180 90 180" position="2.6 2 -5"></a-image>
+    <!--Video 2--><a-box color="green" depth="1.5" height="2" width="1" position="3.2 2 -6.8"></a-box><a-image src="/Poster/spider-man.jpg" rotation ="180 90 180" position="2.6 2 -6.8"></a-image>
   </a-scene>
 
 </html>
