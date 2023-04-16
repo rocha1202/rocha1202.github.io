@@ -1,7 +1,8 @@
 const video = document.querySelector("#video-player");
 
-let fov = 100;
-fov = parseInt(fov)
+window.onload = function(){
+  video.play()
+}
 
 AFRAME.registerComponent("controlevideo", {
     init: function () {
